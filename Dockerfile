@@ -4,7 +4,7 @@ FROM ubuntu:18.04
 ENV DEBIAN_FRONTEND=noninteractive
 
 RUN apt-get update -qq \
-  && apt-get install -qq openjdk-8-jdk unzip cutadapt awscli jq python3-pip python3-dev wget \
+  && apt-get install -qq openjdk-8-jdk unzip cutadapt awscli jq python3-pip python3-dev wget pigz \
   && cd /usr/local/bin \
   && ln -s /usr/bin/python3 python \
   && pip3 --no-cache-dir install --upgrade pip \
